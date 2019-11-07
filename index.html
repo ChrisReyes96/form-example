@@ -8,27 +8,59 @@
     <title>Form Quiz</title>
     <style>
         form {
-            background-color: lightgray;
+            background-color: rgb(243, 243, 243);
         }
+        
+        fieldset {
+            display: block;
+            border: 1px solid rgb(189, 189, 189);            
+        }
+
+        legend {
+                display: block; 
+                padding-left: 10px; 
+                padding-right: 10px; 
+                border: 1px solid rgb(189, 189, 189); 
+                background-color:rgb(255, 255, 255); 
+                color: rgb(14, 194, 194); 
+         }
+
+         button {
+             color: rgb(255, 255, 255);
+             background-color: rgb(14, 194, 194);
+             border: 0;
+             padding: 10px 10px;
+             font-size: 1rem;
+         }
+
+         .radio{
+            background-color:rgb(14, 194, 194);
+            color: rgb(14, 194, 194);
+         }
+         
     </style>
-</head>
+</head> 
 
 <body>
     <form name="contact" method="POST" data-netlify="true">
         <fieldset>
             <legend> Please feel free to send a message </legend>
             <p>
-                <label>Email: <input type="email" name="email" /></label>
+                <label>Email</label>
             </p>
             <p>
-                <label>Message: <textarea name="message"></textarea></label>
+                <input type="email" name="email">
             </p>
+            <p>
+                <label>Message</label>
+            </p>
+                <textarea name="message"></textarea>
             <fieldset>
                 <legend>Would you like a reply?</legend>
-                <ul>
-                    <li><input type="radio" name="yes" value="yes" checked>Yes</li>
-                    <li><input type="radio" name="no" value="no">No</li>
-                </ul>
+                <dl>
+                    <dd><input class ="radio" type="radio" name="reply" value="yes" checked>Yes</dd>
+                    <dd><input class ="radio" type="radio" name="reply" value="no">No</dd>
+                </dl>
             </fieldset>
                 <p>
                     <button type="submit">Send Message</button>
